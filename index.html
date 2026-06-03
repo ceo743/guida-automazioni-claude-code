@@ -44,48 +44,7 @@
 
     .orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
 
-    /* ===== AMBIENT BACKGROUND ===== */
-    .aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-    .aurora span{position:absolute;display:block;border-radius:50%;filter:blur(90px);opacity:0.5;mix-blend-mode:screen}
-    .aurora .a1{width:60vw;height:60vw;background:radial-gradient(circle,rgba(212,175,55,0.22),transparent 60%);top:-20vw;left:-10vw;animation:floatA 18s ease-in-out infinite}
-    .aurora .a2{width:50vw;height:50vw;background:radial-gradient(circle,rgba(191,149,63,0.16),transparent 60%);bottom:-18vw;right:-12vw;animation:floatB 22s ease-in-out infinite}
-    .aurora .a3{width:40vw;height:40vw;background:radial-gradient(circle,rgba(18,112,89,0.10),transparent 60%);top:30%;right:8%;animation:floatA 26s ease-in-out infinite reverse}
-    @keyframes floatA{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(4vw,5vh) scale(1.08)}}
-    @keyframes floatB{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-5vw,-4vh) scale(1.12)}}
-    .grid-overlay{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(212,175,55,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,0.05) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 0%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 0%,transparent 75%);opacity:0.6}
-
-    .card{background:linear-gradient(165deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border:1px solid rgba(212,175,55,0.14);border-radius:24px;padding:44px 40px;position:relative;overflow:hidden;max-width:480px;width:100%;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 30px 80px rgba(0,0,0,0.45),inset 0 1px 0 rgba(255,255,255,0.06)}
-    .card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#D4AF37,#FCF6BA,#D4AF37,transparent);opacity:0.9}
-
-    /* ===== TRUST ROW ===== */
-    .trust-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:20px}
-    .stars{color:#D4AF37;font-size:15px;letter-spacing:2px}
-    .trust-row small{font-size:12px;color:rgba(255,255,255,0.45)}
-
-    /* ===== SECTION + FEATURE CARDS ===== */
-    .section{position:relative;z-index:2;width:100%;max-width:1100px;margin:0 auto;padding:clamp(50px,7vw,90px) 24px}
-    .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:4px;color:#D4AF37;font-weight:700;text-align:center;margin-bottom:14px}
-    .section h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.4vw,40px);font-weight:800;text-align:center;line-height:1.15;margin-bottom:14px}
-    .section .lead{text-align:center;color:rgba(255,255,255,0.55);font-size:clamp(15px,1.3vw,17px);max-width:600px;margin:0 auto clamp(36px,4vw,56px)}
-    .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-    .feature-card{background:linear-gradient(165deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015));border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:30px 26px;transition:transform 0.45s cubic-bezier(0.16,1,0.3,1),border-color 0.45s,box-shadow 0.45s;position:relative;overflow:hidden}
-    .feature-card:hover{transform:translateY(-6px);border-color:rgba(212,175,55,0.35);box-shadow:0 20px 50px rgba(0,0,0,0.4)}
-    .feature-card .ic{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px;background:linear-gradient(135deg,rgba(212,175,55,0.18),rgba(212,175,55,0.04));border:1px solid rgba(212,175,55,0.25)}
-    .feature-card h3{font-size:17px;font-weight:700;margin-bottom:8px;color:#fff}
-    .feature-card p{font-size:14px;line-height:1.6;color:rgba(255,255,255,0.55)}
-
-    /* ===== AUTHOR STRIP ===== */
-    .author-strip{position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding:0 24px clamp(50px,7vw,90px)}
-    .author-box{display:flex;align-items:center;gap:24px;background:linear-gradient(165deg,rgba(255,255,255,0.05),rgba(255,255,255,0.015));border:1px solid rgba(212,175,55,0.14);border-radius:24px;padding:30px 34px;backdrop-filter:blur(14px);box-shadow:0 24px 60px rgba(0,0,0,0.35)}
-    .author-avatar{width:72px;height:72px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#BF953F,#D4AF37);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:28px;font-weight:800;color:#000;box-shadow:0 8px 24px rgba(212,175,55,0.3)}
-    .author-box h4{font-size:17px;font-weight:700;margin-bottom:4px}
-    .author-box .role{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#D4AF37;font-weight:600;margin-bottom:10px}
-    .author-box p{font-size:14px;line-height:1.65;color:rgba(255,255,255,0.6)}
-    @media(max-width:560px){.author-box{flex-direction:column;text-align:center;padding:30px 22px}}
-
-    /* ===== SCROLL REVEAL ===== */
-    .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.8s ease,transform 0.8s cubic-bezier(0.16,1,0.3,1)}
-    .reveal.in{opacity:1;transform:none}
+    .card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:24px;padding:48px 40px;position:relative;overflow:hidden;max-width:480px;width:100%}
 
     .success-msg{display:none;text-align:center;padding:40px 20px}
     .success-msg.active{display:block}
@@ -110,13 +69,15 @@
     .hero-text{text-align:center}
     @media(min-width:769px){.hero-inner{flex-direction:row;align-items:center;gap:64px}.hero-text{flex:1;text-align:left}.hero-text p:last-child{margin-left:0}.card{width:460px;max-width:none;flex-shrink:0}}
   </style>
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/5b24cef87a160ab3ee3c8e35c1c61ff9.js"></script>
 </head>
 <body>
 
-<div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
-<div class="grid-overlay"></div>
 <canvas id="particleCanvas"></canvas>
 <canvas id="trailCanvas"></canvas>
+
+<div class="orb" style="width:700px;height:700px;background:#D4AF37;top:-350px;right:-250px;opacity:0.06;position:fixed"></div>
+<div class="orb" style="width:500px;height:500px;background:#127059;bottom:-250px;left:-200px;opacity:0.04;position:fixed"></div>
 
 <!-- ===== DISCLAIMER ===== -->
 <div id="disclaimer" style="align-self:stretch;padding:12px 32px;text-align:center;background:#000;border-bottom:1px solid rgba(255,255,255,0.05)">
@@ -148,7 +109,6 @@
       </div>
       <div class="card">
         <div class="form-wrap" id="formWrap">
-          <div class="trust-row"><span class="stars">★★★★★</span><small>Il metodo della prima LinkedIn Branding Agency italiana</small></div>
           <p style="font-size:15px;font-weight:600;color:rgba(255,255,255,0.8);margin-bottom:24px;text-align:center">Inserisci i tuoi dati e scarica la guida</p>
           <form id="leadForm" onsubmit="submitForm(event)" novalidate style="display:flex;flex-direction:column;gap:14px">
             <input type="text" name="name" class="form-field" placeholder="Nome e Cognome" required/>
@@ -187,61 +147,6 @@
   </div>
 
 </main>
-
-<!-- ===== COSA CONTIENE ===== -->
-<section class="section reveal">
-  <p class="eyebrow">Cosa trovi dentro</p>
-  <h2>Tutto quello che ti serve per <span class="gold">partire oggi</span></h2>
-  <p class="lead">Niente teoria. Un percorso pratico per costruire la tua prima automazione e farla girare da sola, ogni giorno.</p>
-  <div class="feature-grid">
-    <div class="feature-card">
-      <div class="ic">🔄</div>
-      <h3>Il sistema in 5 step</h3>
-      <p>Il metodo esatto per trasformare un lavoro ripetitivo in un'automazione che funziona, dalla prima riga all'avvio.</p>
-    </div>
-    <div class="feature-card">
-      <div class="ic">✍️</div>
-      <h3>5 automazioni pronte</h3>
-      <p>Cinque automazioni già scritte da copiare e adattare al tuo lavoro in pochi minuti.</p>
-    </div>
-    <div class="feature-card">
-      <div class="ic">📅</div>
-      <h3>Piano di 30 giorni</h3>
-      <p>Un calendario passo passo per metterle in pratica senza perderti, anche se parti da zero.</p>
-    </div>
-    <div class="feature-card">
-      <div class="ic">⏰</div>
-      <h3>Girano 24 ore su 24</h3>
-      <p>Le tue automazioni lavorano mentre dormi, durante il weekend, anche di notte. Senza che tu faccia nulla.</p>
-    </div>
-    <div class="feature-card">
-      <div class="ic">⚡</div>
-      <h3>Zero codice</h3>
-      <p>Non devi essere un programmatore. Basta saper scrivere in italiano quello che vuoi ottenere.</p>
-    </div>
-    <div class="feature-card">
-      <div class="ic">🤖</div>
-      <h3>Pensata per Claude Code</h3>
-      <p>Costruita sullo strumento più potente per chi vuole automatizzare davvero il proprio lavoro.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== AUTORE ===== -->
-<div class="author-strip reveal">
-  <div class="author-box">
-    <div class="author-avatar">DC</div>
-    <div>
-      <h4>Davide Caiazzo</h4>
-      <p class="role">Fondatore DC Academy</p>
-      <p>Ho fondato la prima LinkedIn Branding Agency italiana. In questa guida ti passo lo stesso sistema che uso ogni giorno per delegare alle automazioni il lavoro ripetitivo e concentrarmi su quello che conta.</p>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:40px">
-    <a href="#top" onclick="document.getElementById('leadForm').scrollIntoView({behavior:'smooth'});var n=document.querySelector('#leadForm input[name=name]');if(n)setTimeout(function(){n.focus()},600);return false;" class="btn-gold" style="width:auto;max-width:420px;margin:0 auto"><span>SCARICA LA GUIDA GRATUITA &rarr;</span></a>
-    <p style="font-size:12px;color:rgba(255,255,255,0.3);margin-top:14px">Gratis. Niente carta di credito, niente spam.</p>
-  </div>
-</div>
 
 <footer style="padding:40px 32px;border-top:1px solid rgba(212,175,55,0.1);text-align:center;position:relative;z-index:1">
   <p style="font-size:11px;margin-bottom:16px">
@@ -372,16 +277,6 @@ function submitForm(e){
     },1000);
   },800);
 }
-
-// ===== SCROLL REVEAL =====
-(function(){
-  var els=document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
-  },{threshold:0.15});
-  els.forEach(function(e){io.observe(e)});
-})();
 </script>
 
 <script src="https://dc-chatbot-production.up.railway.app/static/widget.js" defer></script>
